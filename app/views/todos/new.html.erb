@@ -1,9 +1,9 @@
-<h1>New todo</h1>
+<%= render "header" %>
 
-<%= render "form", todo: @todo %>
+<div class="container">
+  <%= render "form", todo: @todo %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Back to todos", todos_path %>
+  <%= link_to "Back to todos", todos_path, class: "link" %>
 </div>

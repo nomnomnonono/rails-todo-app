@@ -11,12 +11,10 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :task, style: "display: block" %>
-    <%= form.text_field :task %>
+  <div class="form">
+    <%= form.label "New Task", style: "display: block" %>
+    <%= form.text_field :task, class: "form-input"%>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<%= render "header" %>
 
-<h1>Todos</h1>
+<div class="container body">
+  <p style="color: green"><%= notice %></p>
 
-<div id="todos">
-  <% @todos.each do |todo| %>
-    <%= render todo %>
-    <p>
-      <%= link_to "Show this todo", todo %>
-    </p>
-  <% end %>
+  <div class="list-group">
+    <% @todos.each do |todo| %>
+      <%= render todo %>
+    <% end %>
+  </div>
+
+  <br>
+
+  <%= link_to "Create new todo", new_todo_path, class: "link" %>
 </div>
-
-<%= link_to "New todo", new_todo_path %>

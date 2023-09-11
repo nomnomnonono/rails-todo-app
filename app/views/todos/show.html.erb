@@ -1,10 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<%= render "header" %>
 
-<%= render @todo %>
+<div class="container">
+  <p style="color: green"><%= notice %></p>
 
-<div>
-  <%= link_to "Edit this todo", edit_todo_path(@todo) %> |
-  <%= link_to "Back to todos", todos_path %>
+  <p class="h4">Task</p>
+  <%= render @todo %>
 
-  <%= button_to "Destroy this todo", @todo, method: :delete %>
+  <div class="buttons">
+    <%= button_to "Edit this todo", edit_todo_path(@todo), method: :patch, class: "btn btn-primary btns"%>
+    <%= button_to "Destroy this todo", @todo, method: :delete, class: "btn btn-primary btns"%>
+  </div>
 </div>
